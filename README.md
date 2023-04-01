@@ -1,6 +1,12 @@
 # buttom-sheet
-![image](https://user-images.githubusercontent.com/82691524/229269304-7d27f3a8-bdc0-4259-a21d-4a420c365335.png)
+* Init
+![image](https://user-images.githubusercontent.com/82691524/229270013-c91dd43e-7e1e-400a-a831-0ee4393f3c49.png)
 
-![image](https://user-images.githubusercontent.com/82691524/229269332-6b5133f2-0e93-456c-908d-662f517061ca.png)
+* Open
 
-![image](https://user-images.githubusercontent.com/82691524/229269341-5a2da277-911a-45c9-b6c2-51ca5678a5e9.png)
+![image](https://user-images.githubusercontent.com/82691524/229270028-e622c02e-abbb-49b8-a42f-e56b05f5b668.png)
+
+* Full screen 
+![image](https://user-images.githubusercontent.com/82691524/229270040-954934b3-7eb1-4d8b-acc2-3e3713a782f0.png)
+
+
