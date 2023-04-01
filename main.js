@@ -1,8 +1,8 @@
 
-const openSheetButton = document.querySelector(".draggable-area")
+const openSheet = document.querySelector(".draggable-area")
 
-const sheetContents = document.querySelector(".sheet")
-const draggableArea = document.querySelector(".draggable-area")
+const sheet = document.querySelector(".sheet")
+const draggable = document.querySelector(".draggable-area")
 
 let sheetHeight = 0
 const SheetOpen = () => {
@@ -15,20 +15,18 @@ const SheetClose = () => {
 const setSheetHeight = (value) => {
 
     sheetHeight = Math.max(0, Math.min(100, value))
-    if (sheetHeight <= 5) return sheetContents.style.height = `${5}vh`
+    if (sheetHeight <= 5) return sheet.style.height = `${5}vh`
 
-    sheetContents.style.height = `${sheetHeight}vh`
+    sheet.style.height = `${sheetHeight}vh`
 
     if (sheetHeight >= 100) {
-        sheetContents.classList.add("fullscreen")
+        sheet.classList.add("fullscreen")
     } else {
-        sheetContents.classList.remove("fullscreen")
+        sheet.classList.remove("fullscreen")
     }
 }
 
-
-// Open the sheet when clicking the 'open sheet' button
-openSheetButton.addEventListener("click", () => {
+openSheet.addEventListener("click", () => {
     let height = Math.min(50, 720 / window.innerHeight * 100)
     if (sheet.classList.contains("active")) {
         setSheetHeight(5)
@@ -36,7 +34,6 @@ openSheetButton.addEventListener("click", () => {
         SheetClose()
     } else {
         SheetOpen()
-        console.log("add")
         setSheetHeight(height)
     }
 })
@@ -60,8 +57,8 @@ let dragPosition
 
 const onDragStart = (event) => {
     dragPosition = touchPosition(event).pageY
-    sheetContents.classList.add("not-selectable")
-    draggableArea.style.cursor = document.body.style.cursor = "grabbing"
+    sheet.classList.add("not-selectable")
+    draggable.style.cursor = document.body.style.cursor = "grabbing"
 }
 
 const onDragMove = (event) => {
@@ -79,8 +76,8 @@ const onDragMove = (event) => {
 
 const onDragEnd = () => {
     dragPosition = undefined
-    sheetContents.classList.remove("not-selectable")
-    draggableArea.style.cursor = document.body.style.cursor = ""
+    sheet.classList.remove("not-selectable")
+    draggable.style.cursor = document.body.style.cursor = ""
 
     if (sheetHeight < 25) {
         setSheetHeight(5)
@@ -94,8 +91,8 @@ const onDragEnd = () => {
     }
 }
 
-draggableArea.addEventListener("mousedown", onDragStart)
-draggableArea.addEventListener("touchstart", onDragStart)
+draggable.addEventListener("mousedown", onDragStart)
+draggable.addEventListener("touchstart", onDragStart)
 
 window.addEventListener("mousemove", onDragMove)
 window.addEventListener("touchmove", onDragMove)
