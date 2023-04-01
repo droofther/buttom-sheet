@@ -10,10 +10,12 @@
 html,
 
 body {
-    background-color: #f1f1f1;
     position: relative;
     overflow: hidden;
     line-height: 1.5;
+    max-width: 50rem;
+    margin: auto;
+    background-color:#dddddd
 }
 
 h1 {
@@ -22,7 +24,20 @@ h1 {
     text-align: center;
     margin-top:4rem;
 }
+.presentation{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.presentation_image{
+    width: 60%;
+}
 
+@media (max-width: 768px){
+    .presentation_image{
+        width: 90%;
+    }
+}
 
 button {
     cursor: pointer;
@@ -39,6 +54,8 @@ button {
     height: 5vh;
     margin: 0 auto;
     width: 100%;
+    max-width: 50rem;
+    margin: auto;
     bottom: 0;
     z-index: 2;
     visibility: visible;
