@@ -51,11 +51,10 @@ button {
     overflow-y: hidden;
     transform: translateY(0%);
     max-height: 100vh;
-    height: 5vh;
+    height: 40px;
     margin: 0 auto;
     width: 100%;
     max-width: 50rem;
-    margin: auto;
     bottom: 0;
     z-index: 2;
     visibility: visible;
@@ -87,7 +86,7 @@ button {
 
 .sheet .close-sheet {
     border: none;
-    padding: 0.7rem;
+    
 }
 
 .contents {
@@ -95,7 +94,6 @@ button {
 }
 
 .controls {
-
     display: flex;
     justify-content: center;
 
@@ -103,20 +101,32 @@ button {
  .draggable-area{
 
 }
-.controls .draggable-area {
+.controls-sheet .draggable-area {
     display: flex;
     width: 4rem;
     margin: auto;
-    padding: 1rem;
+    padding: 20px;
     cursor: grab;
 }
-.container {
-    height: 90%;
-    overflow-y: auto;
-    padding: 0 20px 20px;
+.container-sheet {
+    overflow: hidden;
+  
+}
+.container-sheet {
+    height: 95%;
+   
+    overflow: hidden;
+
+}
+.content-sheet {
+    padding: 0 20px;
+    height: 100%;
+    padding-bottom: 20px;
+   
+    
 }
 
-.container .image {
+.container-sheet .image {
     max-width: 20rem;
     width: 100%;
 }
